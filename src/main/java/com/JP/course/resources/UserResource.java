@@ -17,6 +17,7 @@ public class UserResource {
 	//it uses the path /users
 	
 	//testing
+	//when we search for localhost:8090, the application shall show us this User u
 	@GetMapping
 	public ResponseEntity<User> findAll(){
 		User u = new User(1L, "Maria", "maria@gmail.com", "999999999", "12345");
