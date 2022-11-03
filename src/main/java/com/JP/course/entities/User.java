@@ -3,10 +3,22 @@ package com.JP.course.entities;
 import java.io.Serializable;
 import java.util.Objects;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
+import jakarta.persistence.Table;
+
+//JPA mapping
+@Entity
+@Table(name = "tb_user")
 public class User implements Serializable {
 	
 	private static final long serialVersionUID = 1L;
-	private Long id;
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)//autoincrement
+	private Long id;//@Id indicates that this variable is the primary key
 	private String name;
 	private String email;
 	private String phone;

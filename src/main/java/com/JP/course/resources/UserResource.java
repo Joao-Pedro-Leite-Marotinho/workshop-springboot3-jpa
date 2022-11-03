@@ -16,7 +16,6 @@ public class UserResource {
 	//ResponseEntity is an specific type that respond to web requisitions
 	//it uses the path /users
 	
-	//testing
 	//when we search for localhost:8090, the application shall show us this User u
 	@GetMapping
 	public ResponseEntity<User> findAll(){
