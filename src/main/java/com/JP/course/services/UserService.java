@@ -10,7 +10,7 @@ import com.JP.course.entities.User;
 import com.JP.course.repositories.UserRepository;
 
 //register the class as a Spring component so it can be injected automatically
-//@Component, @Repository, @Service
+//@Component, @Repository, @Service and so on
 @Service
 public class UserService {
 	
