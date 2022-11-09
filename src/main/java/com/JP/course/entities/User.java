@@ -5,6 +5,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Objects;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -28,6 +30,7 @@ public class User implements Serializable {
 	private String password;
 	
 	//This "client" is the same as "private User client", in the Order entity
+	@JsonIgnore
 	@OneToMany(mappedBy = "client") //One client to many orders.
 	private List<Order> orders = new ArrayList<>();//assossiating entity User with entity Order
 	
