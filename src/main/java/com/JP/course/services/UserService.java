@@ -31,5 +31,9 @@ public class UserService {
 		return obj.get();
 		//returns the object (type user) that comes inside the optional
 	}
-
+	
+	public User insert(User obj) {
+		return repository.save(obj);
+	}
+	
 }
